@@ -5,11 +5,12 @@ import {
   getStatusBarHeight,
   getBottomSpace,
 } from "react-native-iphone-x-helper";
-import MyProfile from "./src/MyProfile";
+import Profile from "./src/Profile";
 import { friendProfiles, myProfile } from "./src/data";
 import Margin from "./src/Margin";
 import Division from "./src/Division";
 import FriendSection from "./src/FriendSection";
+import FriendList from "./src/FriendList";
 
 const statusBarHeight = getStatusBarHeight(true);
 const bottomSpace = getBottomSpace();
@@ -26,7 +27,7 @@ export default function App() {
       <SafeAreaView style={styles.container} edges={["right", "left"]}>
         <Header />
         <Margin height={10} />
-        <MyProfile
+        <Profile
           uri={myProfile.uri}
           name={myProfile.name}
           introduction={myProfile.introduction}
@@ -39,6 +40,7 @@ export default function App() {
           friendProfileLen={friendProfiles.length}
           onPressArrow={onPressArrow}
         />
+        <FriendList data={friendProfiles} />
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -49,6 +51,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     paddingTop: statusBarHeight,
-    marginHorizontal: 10,
+    paddingHorizontal: 15,
   },
 });
