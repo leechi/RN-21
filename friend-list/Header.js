@@ -16,7 +16,6 @@ export default () => {
         flexDirection: "row",
         justifyContent: "space-between",
         paddingVertical: 10,
-        paddingHorizontal: 10,
       }}
     >
       <Text style={styles.title}>친구</Text>

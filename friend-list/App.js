@@ -5,6 +5,9 @@ import {
   getStatusBarHeight,
   getBottomSpace,
 } from "react-native-iphone-x-helper";
+import MyProfile from "./MyProfile";
+import { myProfile } from "./src/data";
+import Margin from "./Margin";
 
 const statusBarHeight = getStatusBarHeight(true);
 const bottomSpace = getBottomSpace();
@@ -17,6 +20,12 @@ export default function App() {
     <SafeAreaProvider>
       <SafeAreaView style={styles.container} edges={["right", "left"]}>
         <Header />
+        <Margin height={10} />
+        <MyProfile
+          uri={myProfile.uri}
+          name={myProfile.name}
+          introduction={myProfile.introduction}
+        />
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -27,5 +36,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     paddingTop: statusBarHeight,
+    marginHorizontal: 10,
   },
 });
