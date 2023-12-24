@@ -1,11 +1,20 @@
-import { View, Text, StyleSheet, SafeAreaView } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  SafeAreaView,
+  TouchableOpacity,
+} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 const IconButton = ({ name }) => {
   return (
-    <View style={{ paddingHorizontal: 6 }}>
+    <TouchableOpacity
+      hitSlop={{ top: 15, bottom: 15 }}
+      style={{ paddingHorizontal: 6 }}
+    >
       <Ionicons name={name} size={24} color="black" />
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -16,6 +25,7 @@ export default () => {
         flexDirection: "row",
         justifyContent: "space-between",
         paddingVertical: 10,
+        backgroundColor: "white",
       }}
     >
       <Text style={styles.title}>친구</Text>

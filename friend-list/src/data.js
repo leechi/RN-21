@@ -74,4 +74,34 @@ export const friendProfiles = [
     name: "성지현",
     introduction: "~off~",
   },
+  {
+    uri: "https://cdn.pixabay.com/photo/2018/01/15/22/25/gingerbread-men-3084961__480.jpg",
+    name: "한성은",
+    introduction: "헤헷",
+  },
+  {
+    uri: "https://cdn.pixabay.com/photo/2016/02/09/16/35/night-1189929__480.jpg",
+    name: "안다희",
+    introduction: "하면 한다",
+  },
+  {
+    uri: "https://cdn.pixabay.com/photo/2018/09/24/08/52/mountains-3699372__480.jpg",
+    name: "유현서",
+    introduction: "아자",
+  },
+  {
+    uri: "https://cdn.pixabay.com/photo/2019/03/25/22/52/poodle-4081526__480.jpg",
+    name: "박세인",
+    introduction: "우니",
+  },
+  {
+    uri: "https://cdn.pixabay.com/photo/2018/09/29/23/09/watermelon-3712515__480.jpg",
+    name: "배유림",
+    introduction: "신나",
+  },
+  {
+    uri: "https://cdn.pixabay.com/photo/2017/08/30/17/12/waffle-hearts-2697904__480.jpg",
+    name: "성지현",
+    introduction: "~off~",
+  },
 ];
