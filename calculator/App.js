@@ -1,5 +1,4 @@
-import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet } from "react-native";
 import Calculator from "./src/Calculator";
 
 export default function App() {
