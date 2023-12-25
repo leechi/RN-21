@@ -1,5 +1,6 @@
 import React from "react";
 import { View, TouchableOpacity, Text } from "react-native";
+import styled from "styled-components";
 
 // Button type: 'reset' | 'operator' | 'num'
 const Button = ({ text, onPress, flex, type }) => {
@@ -36,6 +37,11 @@ const COLOR = {
   NUM: "#5c5674",
 };
 
+const ButtonContainer = styled.View`
+  flex-direction: row;
+  width: 100%;
+`;
+
 export default () => {
   return (
     <View style={{ flex: 1, width: 250 }}>
@@ -47,33 +53,33 @@ export default () => {
         <Button type="operator" text="/" onPress={() => null} flex={1} />
       </View>
       {/* [7 ~ x] */}
-      <View style={{ flexDirection: "row", width: "100%" }}>
+      <ButtonContainer>
         <Button type="num" text="7" onPress={() => null} flex={1} />
         <Button type="num" text="8" onPress={() => null} flex={1} />
         <Button type="num" text="9" onPress={() => null} flex={1} />
         <Button type="operator" text="X" onPress={() => null} flex={1} />
-      </View>
+      </ButtonContainer>
 
       {/* [4 ~ -] */}
-      <View style={{ flexDirection: "row", width: "100%" }}>
+      <ButtonContainer>
         <Button type="num" text="4" onPress={() => null} flex={1} />
         <Button type="num" text="5" onPress={() => null} flex={1} />
         <Button type="num" text="6" onPress={() => null} flex={1} />
         <Button type="operator" text="-" onPress={() => null} flex={1} />
-      </View>
+      </ButtonContainer>
 
       {/* [1 ~ +] */}
-      <View style={{ flexDirection: "row", width: "100%" }}>
+      <ButtonContainer>
         <Button type="num" text="1" onPress={() => null} flex={1} />
         <Button type="num" text="2" onPress={() => null} flex={1} />
         <Button type="num" text="3" onPress={() => null} flex={1} />
         <Button type="operator" text="+" onPress={() => null} flex={1} />
-      </View>
+      </ButtonContainer>
       {/* [0 ~ =] */}
-      <View style={{ flexDirection: "row", width: "100%" }}>
+      <ButtonContainer>
         <Button type="num" text="0" onPress={() => null} flex={3} />
         <Button type="operator" text="=" onPress={() => null} flex={1} />
-      </View>
+      </ButtonContainer>
     </View>
   );
 };
